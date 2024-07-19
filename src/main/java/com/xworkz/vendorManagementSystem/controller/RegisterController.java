@@ -89,7 +89,7 @@ public class RegisterController {
         if (constraintViolations.isEmpty()) {
             session.setAttribute("accountCreateMessage", "Account created successfully. Please sign in.");
             log.info("Vendor registration successful: {}", dto.getEmailId());
-            return "logIn";
+            return "logInPage";
         } else {
             model.addAttribute("errors", constraintViolations);
             log.warn("Vendor registration failed with errors: {}", constraintViolations);
